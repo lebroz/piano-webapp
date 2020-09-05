@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+    background: url('../assets/theater.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+html {
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.key {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: system-ui;
+    font-size: x-large;
+    font-weight: 500;
+    border: 2px white solid;
+    border-radius: 12px;
+    cursor: pointer;
+    user-select: none;
+    touch-action: manipulation;
+}
+
+.key:not(:first-child) {
+    margin-left:16px;
+}
+
+.key:hover {
+    border: 2px orange solid;
+}
+
+.key.active {
+    border: 2px red solid;
+}
