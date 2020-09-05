@@ -33,6 +33,7 @@ html {
     cursor: pointer;
     user-select: none;
     touch-action: manipulation;
+    margin-bottom: 145px;
 }
 
 .key:not(:first-child) {
