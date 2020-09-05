@@ -34,6 +34,7 @@ html {
     user-select: none;
     touch-action: manipulation;
     margin-bottom: 145px;
+    transition:all 0.07s;
 }
 
 .key:not(:first-child) {
@@ -45,5 +46,8 @@ html {
 }
 
 .key.active {
-    border: 2px red solid;
+    transform:scale(1.1);
+    border-color: orange;
+    box-shadow: 0 0 10px orange;
+    /*border: 2px red solid;*/
 }
