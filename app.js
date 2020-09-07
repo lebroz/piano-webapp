@@ -1,15 +1,23 @@
-import express from "express"
-import Router from "express"
-import path from "path"
+let express = require("express");
+let path = require("path");
+let cors = require('cors');
 
 const app = express()
+const router = express.Router();
 
-app.use(express.static(path.resolve(__dirname, "../public")))
+app.use(cors());
+app.use(express.static(path.resolve(__dirname, "public")))
+app.use(express.static(path.resolve(__dirname, "./")))
 
-const router = Router();
+app.use(function(req, res, next){
+    res.header('Access-Control-Allow-Origin', '*');
+    res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+    res.header('Access-Control-Allow-Headers', 'Content-Type');
+    next();
+});
 
 router.get('/', function(req, res){
-    res.sendFile(path.resolve(__dirname, "../index.html"));
+    res.sendFile(path.resolve(__dirname, "index.html"));
 });
 
 app.use('/', router);

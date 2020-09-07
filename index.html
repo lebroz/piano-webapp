@@ -3,62 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <title>Piano Keyboard</title>
-    <script src="https://unpkg.com/lodash@4.16.6"></script>
+    <link rel="icon" href="assets/favicon.ico" />
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <script src="js/index.js" type="text/javascript"></script>
 </head>
 <body>
     <div class="container">
         <!-- C4 range -->
-        <div class="key" id="c4" onmousedown="onMouseDown(this.id)" onmouseup="onMouseUp(this.id)">
+        <div class="key" data-note="c4" onmousedown="onMouseDown(this)" onmouseup="onMouseUp(this)">
             <p>C4</p>
-            <audio id="c4-audio" preload="auto" src="assets/do.wav">
-                Your browser does not support the
-                <code>audio</code> element.
-            </audio>
         </div>
-        <div class="key" id="d4" onmousedown="onMouseDown(this.id)" onmouseup="onMouseUp(this.id)">
+        <div class="key" data-note="d4" onmousedown="onMouseDown(this)" onmouseup="onMouseUp(this)">
             <p>D4</p>
-            <audio id="d4-audio" preload="auto" src="assets/re.wav">
-                Your browser does not support the
-                <code>audio</code> element.
-            </audio>
         </div>
-        <div class="key" id="e4" onmousedown="onMouseDown(this.id)" onmouseup="onMouseUp(this.id)">
+        <div class="key" data-note="e4" onmousedown="onMouseDown(this)" onmouseup="onMouseUp(this)">
             <p>E4</p>
-            <audio id="e4-audio" preload="auto" src="assets/mi.wav">
-                Your browser does not support the
-                <code>audio</code> element.
-            </audio>
         </div>
-        <div class="key" id="f4" onmousedown="onMouseDown(this.id)" onmouseup="onMouseUp(this.id)">
+        <div class="key" data-note="f4" onmousedown="onMouseDown(this)" onmouseup="onMouseUp(this)">
             <p>F4</p>
-            <audio id="f4-audio" preload="auto" src="assets/fa.wav">
-                Your browser does not support the
-                <code>audio</code> element.
-            </audio>
         </div>
-        <div class="key" id="g4" onmousedown="onMouseDown(this.id)" onmouseup="onMouseUp(this.id)">
+        <div class="key" data-note="g4" onmousedown="onMouseDown(this)" onmouseup="onMouseUp(this)">
             <p>G4</p>
-            <audio id="g4-audio" preload="auto" src="assets/sol.wav">
-                Your browser does not support the
-                <code>audio</code> element.
-            </audio>
         </div>
-        <div class="key" id="a4" onmousedown="onMouseDown(this.id)" onmouseup="onMouseUp(this.id)">
+        <div class="key" data-note="a4" onmousedown="onMouseDown(this)" onmouseup="onMouseUp(this)">
             <p>A4</p>
-            <audio id="a4-audio" preload="auto" src="assets/si.wav">
-                Your browser does not support the
-                <code>audio</code> element.
-            </audio>
         </div>
-        <div class="key" id="b4" onmousedown="onMouseDown(this.id)" onmouseup="onMouseUp(this.id)">
+        <div class="key" data-note="b4" onmousedown="onMouseDown(this)" onmouseup="onMouseUp(this)">
             <p>B4</p>
-            <audio id="b4-audio" preload="auto" src="assets/Piano.mf.B4.mp3">
-                Your browser does not support the
-                <code>audio</code> element.
-            </audio>
         </div>
+
+        <!-- audio sounds -->
+        <audio id="c4" preload data-type="audio" src="assets/do.wav"></audio>
+        <audio id="d4" preload data-type="audio" src="assets/re.wav"></audio>
+        <audio id="e4" preload data-type="audio" src="assets/mi.wav"></audio>
+        <audio id="f4" preload data-type="audio" src="assets/fa.wav"></audio>
+        <audio id="g4" preload data-type="audio" src="assets/sol.wav"></audio>
+        <audio id="a4" preload data-type="audio" src="assets/la.wav"></audio>
+        <audio id="b4" preload data-type="audio" src="assets/si.wav"></audio>
+
     </div>
+<!--    <script>-->
+    <!--        if ('serviceWorker' in navigator) {-->
+    <!--            navigator.serviceWorker.register('/sw.js', {scope: '/'})-->
+    <!--                .then((reg) => {-->
+    <!--                    console.log('Registration succeeded. Scope is ' + reg.scope);-->
+    <!--                }).catch((error) => {-->
+    <!--                console.log('Registration failed with ' + error);-->
+    <!--            });-->
+    <!--        }-->
+    <!--    </script>-->
 </body>
 </html>
